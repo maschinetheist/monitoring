@@ -20,13 +20,11 @@ def saltevent(minion_id, tag, msg):
         'tags/' + tag,
         {
             'minion': minion_id,
-			'log_message': msg
+            'log_message': msg
         }
     )
 
 class FileReader:
-    logfile = None
-
     def __init__(self, logfile, tag, search_str):
         self.logfile = logfile
         self.tag = tag
