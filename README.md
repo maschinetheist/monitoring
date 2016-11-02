@@ -41,7 +41,7 @@ Requires:
 * salt.client
 * mailbox
 
-Go through Maildir and fire off alerts into SaltStack event bus if a particular subject in an email is found. Useful for parsing Zabbix email alerts. One of the examples checks for out of sync clocks in msg['subject'].
+Go through Maildir and fire off alerts into SaltStack event bus if a particular subject in an email is found. Useful for parsing Zabbix email alerts. One of the examples checks for out of sync clocks in ```msg['subject']```.
 
 #### check_dns_records.pl
 This script checks for missing A and PTR records against DNS forward and reverse zones.
