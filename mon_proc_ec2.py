@@ -1,8 +1,8 @@
-#!/usr/lib/python
+#!/usr/bin/env python
 #
 # Author:  Mike Pietruszka
 # Date:    Sep 7th, 2015
-# Summary: Gather statistics on system processes and relay back to cloudwatch
+# Summary: Gather statistics on system processes and relay back to CloudWatch
 #
 
 import sys
@@ -35,7 +35,7 @@ def send_process_list_metrics(instance_id, region, metrics, namespace, unit='Cou
     metrics is expected to be a map of key -> value pairs of metrics
     '''
     cw = cloudwatch.connect_to_region(region)
-    cw.put_metric_data(namespace, metrics.keys(), metrics.values(), unit=unit, 
+    cw.put_metric_data(namespace, metrics.keys(), metrics.values(), unit=unit,
                         dimensions={"InstanceId": instance_id})
 
 if __name__ == '__main__':
