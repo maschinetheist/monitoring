@@ -13,12 +13,12 @@ This is a script for Nagios/Zenoss that monitor LSI MegaRAID arrays and checks w
 #### check_vol_usage.pl
 This script checks for any filesystems with runaway utilization.  It's great substitute to individually checking filesystems.
 
-#### mon_proc_ec2.py
+#### check_process_ec2.py
 Requires:
 * psutil
 * boto2
 
-This script monitors specific processes (passed as arguments) and relays the count of them to AWS Cloudwatch.  Good for checking for abnormally large amount of processes running on the EC2 instance.
+This script monitors specific processes (passed as arguments) running on an EC2 instance and relays the count of them to AWS Cloudwatch.  Good for checking for abnormally large amount of processes running on the EC2 instance.
 
 #### check_http_cw.py
 Requires:
